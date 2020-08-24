@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="hero">
+        <img src="img/lOGO.png" />
+
+        <h1>Artic survival</h1>
+        <div class="linea"></div>
+        <p class="sudtitulo">Muy pronto</p>
+        <section class="clearfix">
+          <div class="caja">
+            <p id="dias"></p>
+            <p>D</p>
+          </div>
+          <div class="caja">
+            <p id="horas"></p>
+            <p>H</p>
+          </div>
+          <div class="caja">
+            <p id="minutos"></p>
+            <p>M</p>
+          </div>
+          <div class="caja">
+            <p id="segundos"></p>
+            <p>S</p>
+          </div>
+        </section>
+      </div>
+    </header>
+  </body>
+  <script>
+    var count = new Date("Jan 1,2021 00:00:00").getTime();
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = count - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("dias").innerHTML = days;
+      document.getElementById("horas").innerHTML = hours;
+      document.getElementById("minutos").innerHTML = minutes;
+      document.getElementById("segundos").innerHTML = seconds;
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("launch").innerHTML = "Expired";
+      }
+    }, 1000);
+  </script>
+</html>

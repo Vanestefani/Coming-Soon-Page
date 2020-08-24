@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    background-image: url(./img/FONDO.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+img {
+
+    width: 25%;
+}
+
+.hero {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    text-align: center;
+}
+
+h1 {
+    font-family: Caveat Brush;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+
+}
+
+.linea {
+    height: 10px;
+    width: 100px;
+    padding: 0%;
+    margin: 0px auto;
+    background: linear-gradient(90deg, #30E3CA 112040%, #2F89FC 128078%);
+    border-radius: 20px 20px 20px 20px;
+}
+
+p {
+    font-size: 30px;
+
+    font-family: 'Chakra Petch', sans-serif;
+
+}
+
+.sudtitulo {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 94px;
+}
+
+.fechas {}
+
+.clearfix {
+    display: inline-flex;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+}
+
+.caja {
+margin:20px;
+    width: 100px;
+    height: 100px;
+    background: #FFEDED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding:0px auto;
+}
+.caja p {
+    color: black;
+}
